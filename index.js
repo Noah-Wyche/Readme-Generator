@@ -1,7 +1,6 @@
 // Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const axios = require('axios');
 
 // Other Variables
 const licenseOptions = ['MIT', 'Apache', 'GPL', 'None'];
@@ -10,8 +9,36 @@ const licenseOptions = ['MIT', 'Apache', 'GPL', 'None'];
 const questions = [
     {
         type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub Username:',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("A valid GitHub username is required.");
+            }
+            return true;
+        }
+      },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address:',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("A valid Email address is required.");
+            }
+            return true;
+        }
+      },
+    {
+        type: 'input',
         name: 'title',
         message: 'Enter the title of your project:',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("A valid Project Name is required.");
+            }
+            return true;
+        }
       },
     {
         type: 'input',
@@ -36,40 +63,31 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Enter the test instiructions for the project:',
+        message: 'Enter the test instructions for the project:',
       },
     {
         type: 'list',
-        name: 'liscense',
+        name: 'license',
         message: 'Choice a liscense from the provided choices:',
         choices: licenseOptions,
       },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'Enter your GitHub Username:',
-      },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'Enter your email address:',
-    },
 ];
 
 inquirer.prompt(questions).then((answers) => {
     console.log('Chosen license:', answers.license);
-    // Do something with the selected license
+    // Calling function to write README file
+    writeToFile('README.md', answers);
   });
 
 // Function to write README file
 function writeToFile(fileName, data) {
-    fs.writeToFile(fileName, data, (err) =>
+    fs.writeToFile(fileName, generateMarkdown(data), (err) =>
     err ? console.error(err) : console.log('Readme Generated Sucessfully!')
     );
 }
 
 // TODO: Create a function to initialize app
-function init(ReadmeGenerator) {
+function init() {
 
 }
 
