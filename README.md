@@ -1,4 +1,4 @@
-# README.Generator  
+# README.Generator 
 
 ## Description
 This project is an easy to use Node application to run in the terminal. It is designed to generate professional README.md documents by asking users a series of questions.
@@ -7,8 +7,6 @@ This project is an easy to use Node application to run in the terminal. It is de
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
-- [License](#license)
 - [Questions](#questions)
 
 ## Installation
