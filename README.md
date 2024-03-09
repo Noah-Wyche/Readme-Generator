@@ -1,26 +1,31 @@
-# README.Generator 
+# J.A.T.E. PWA Text Editor [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-This project is an easy to use Node application to run in the terminal. It is designed to generate professional README.md documents by asking users a series of questions.
+This Progressive Web Application runs in the browser and can be installed onto your local machine. It runs a simple text editor where you can add notes and code regardless of online status.
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
 - [Questions](#questions)
 
 ## Installation
-In order to use this application you would simply clone this repository to your personal machine, download the neccessary packages (npm inquirer) (npm fs) (npm i) and be sure to have Node downloaded on your personal machine. Then the application will be ready to run in the terminal.
+To install the application and use it yourself you could clone this repository: https://github.com/Noah-Wyche/Note-Taker. You would then install the necessary dependencies using npm install. Then use npm start in the root of the project to run the server. Alternatively the application is being hosted on render where it can be accessed and downloaded ready to use. 
 
 ## Usage
-To use this application simply open a terminal window for the repository and run "node index.js" (or just "node index"). You will then be prompted with a series of questions about your project such as its title and description, along with information about the user such as their Github profile name and email address. Answer each question as thoroughly as you would like it to appear in the final document but be aware that you can edit the README after it is complete. When you have completed all the questions it will ask if your project is held under a liscense. You may either select the liscense that applies or choose "none". An icon of the chosen liscense will appear at the top of the page as well as a note on which liscense is chosen at the bottom.
+To use this application simply type into the text editor
 
 ## Contributing
-Starting code for this project came from Github User: [gachoi06](https://github.com/gachoi06) in the potential-enigma repository. All other code was written by me! We do not need any further collaboration on this project.
+No further contribution is planned for this project but feel free to use the code for your own purposes.
+
+## Tests
+There are no tests written for this application
+
+## ## License
+
+This project is licensed under the [MIT License]([MIT License](https://opensource.org/licenses/MIT)).
 
 ## Questions
-For any questions, please contact [Noah-Wyche](https://github.com/Noah-Wyche) via email at Noahwcyhe1@gmail.com.
-
-For a demonstration of this application in action, follow this link: https://app.screencastify.com/v3/watch/cx2m204uMQFeWmGqXroc 
-
-Thanks!
+For any questions, please contact [Noah-Wyche](https://github.com/Noah-Wyche) via email at noahwyche1@gmail.com.
